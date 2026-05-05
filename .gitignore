@@ -1,0 +1,109 @@
+# =============================================================================
+# .gitignore — VeriFactu InFoAL para WooCommerce
+# =============================================================================
+
+# ── Antigravity / agente de desarrollo ───────────────────────────────────────
+# Carpeta de configuración del agente AI (reglas internas de ingeniería).
+.agent/
+
+# ── Documentación interna de desarrollo ──────────────────────────────────────
+# Ficheros de contexto y tareas pendientes del equipo de desarrollo.
+# No son relevantes para los usuarios del plugin.
+PROJECT_CONTEXT.md
+TODO.md
+_PENDING_CHANGES.md
+
+# ── Dependencias de Composer ──────────────────────────────────────────────────
+# Solo se publican composer.json y composer.lock; el vendor/ se regenera con:
+#   composer install --no-dev --optimize-autoloader
+/vendor/
+/node_modules/
+
+# ── Logs y debug ─────────────────────────────────────────────────────────────
+*.log
+/logs/
+/debug/
+debug.log
+php_errors.log
+wp-debug.log
+
+# ── Configuración local / entorno ─────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+wp-config.php
+wp-config-local.php
+local-config.php
+
+# ── Builds y compilados ───────────────────────────────────────────────────────
+/build/
+/dist/
+*.min.js.map
+*.min.css.map
+
+# ── Tests y cobertura ─────────────────────────────────────────────────────────
+/tests/coverage/
+.phpunit.result.cache
+phpunit.xml
+phpunit.xml.dist
+
+# ── Herramientas de calidad de código ─────────────────────────────────────────
+.phpcs.xml
+.phpcs.xml.dist
+phpcs.xml
+phpcs.xml.dist
+.phpstan.neon
+.phpstan.neon.dist
+
+# ── Editores e IDEs ───────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+*.kate-swp
+
+# ── Sistema operativo ─────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Ficheros temporales ───────────────────────────────────────────────────────
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+/tmp/
+
+# ── Archivos de instalación / scripts de servidor ────────────────────────────
+# Scripts de prueba o utilidades solo para el entorno de desarrollo.
+create_test_products.php
+/scripts/dev/
+
+# ── SQL de mantenimiento (solo para uso interno del equipo) ───────────────────
+# Contiene migraciones manuales y queries de diagnóstico, no para distribución.
+/sql/
+
+# ── Imágenes QR generadas localmente ─────────────────────────────────────────
+/assets/img/qr/
+
+# ── Releases y ZIPs empaquetados ─────────────────────────────────────────────
+/releases/
+*.zip
+!tests/fixtures/**/*.zip
+
+# ── Ficheros de documentación generada (phpDocumentor, Doxygen) ───────────────
+/docs/api/
+
+# ── Traducciones compiladas ───────────────────────────────────────────────────
+# Se publican los .pot y .po; los binarios .mo se regeneran con:
+#   msgfmt languages/verifactu-infoal-es_ES.po -o languages/verifactu-infoal-es_ES.mo
+# *.mo
